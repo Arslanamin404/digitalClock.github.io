@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+.clockBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#060a1f;
+    /* min-height: 75vh; */
+}
+#clock{
+    background: #479F76;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.8em;
+}
+.clockBody #time {
+    display: flex;
+}
+.clockBody #time div {
+    position: relative;
+    margin: 5px 5px 8px;
+    /* -webkit-box-reflect: below 1px linear-gradient(transparent,#000); */
+}
+.clockBody #time div span{
+    position: relative;
+    width: 100px; 
+    height: 80px;
+    background: #2196f3;
+    color: #fff;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    z-index: 10;  
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+}
+.clockBody #time div span:nth-child(2){
+    height: 30px;
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    z-index: 9;
+    box-shadow: none;
+    background: #127fd6;
+    text-transform:uppercase;
+}
+.clockBody #time div:nth-last-child(2) span{
+    background-color: #FD9843;
+}
+.clockBody #time div:last-child span{
+    background-color: #ff006a;
+}
+.clockBody #time div:last-child span:nth-child(2){
+    background: #ec0062;
+}
+@media screen and (300px <= width <= 600px){
+    .clockBody{
+        min-height: 50vh;
+    }
+    .clockBody #time div span{
+        width: 70px; 
+        height: 50px;
+        font-size: 1.8em;
+    } 
+    .clockBody #time div .am_pm{
+        width: 50px;
+        height: 50px;
+        font-size: 1em;
+        letter-spacing: .1em;
+    }
+    .clockBody #time div span:nth-child(2).am_pm{
+        font-size: 0.5em;       
+    }  
+}
